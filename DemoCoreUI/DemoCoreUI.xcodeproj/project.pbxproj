@@ -14,6 +14,7 @@
 		DAACE1A929659D5F00E63FE5 /* DemoCoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1A829659D5F00E63FE5 /* DemoCoreUITests.swift */; };
 		DAACE1B329659D5F00E63FE5 /* DemoCoreUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1B229659D5F00E63FE5 /* DemoCoreUIUITests.swift */; };
 		DAACE1B529659D5F00E63FE5 /* DemoCoreUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1B429659D5F00E63FE5 /* DemoCoreUIUITestsLaunchTests.swift */; };
+		DAACE1C52965A68300E63FE5 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = DAACE1C42965A68300E63FE5 /* CoreUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DAACE1AE29659D5F00E63FE5 /* DemoCoreUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoCoreUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAACE1B229659D5F00E63FE5 /* DemoCoreUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCoreUIUITests.swift; sourceTree = "<group>"; };
 		DAACE1B429659D5F00E63FE5 /* DemoCoreUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCoreUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAACE1C22965A62D00E63FE5 /* Package */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Package; path = ../Package; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAACE1C52965A68300E63FE5 /* CoreUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +77,12 @@
 		DAACE18B29659D5700E63FE5 = {
 			isa = PBXGroup;
 			children = (
+				DAACE1C12965A62D00E63FE5 /* Packages */,
 				DAACE19629659D5700E63FE5 /* DemoCoreUI */,
 				DAACE1A729659D5F00E63FE5 /* DemoCoreUITests */,
 				DAACE1B129659D5F00E63FE5 /* DemoCoreUIUITests */,
 				DAACE19529659D5700E63FE5 /* Products */,
+				DAACE1C32965A68300E63FE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +132,21 @@
 			path = DemoCoreUIUITests;
 			sourceTree = "<group>";
 		};
+		DAACE1C12965A62D00E63FE5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE1C22965A62D00E63FE5 /* Package */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		DAACE1C32965A68300E63FE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,9 @@
 			dependencies = (
 			);
 			name = DemoCoreUI;
+			packageProductDependencies = (
+				DAACE1C42965A68300E63FE5 /* CoreUI */,
+			);
 			productName = DemoCoreUI;
 			productReference = DAACE19429659D5700E63FE5 /* DemoCoreUI.app */;
 			productType = "com.apple.product-type.application";
@@ -583,6 +606,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAACE1C42965A68300E63FE5 /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAACE18C29659D5700E63FE5 /* Project object */;
 }
