@@ -8,15 +8,17 @@
 
 import SwiftUI
 
-struct CarouselView: View {
+public struct CarouselView: View {
+    
+    let spec: CarouselSpec
     
     @State private var index = 0
     
-    var body: some View {
+    public var body: some View {
         VStack{
             
             TabView(selection: $index) {
-                ForEach((0..<3), id: \.self) { index in
+                ForEach((0..<spec.totalSlides), id: \.self) { index in
                     CardView()
                 }
             }
@@ -26,7 +28,7 @@ struct CarouselView: View {
             .padding()
             
             HStack(spacing: 4) {
-                ForEach((0..<3), id: \.self) { index in
+                ForEach((0..<spec.totalSlides), id: \.self) { index in
                     Circle()
                         .fill(index == self.index ? Color.purple : Color.purple.opacity(0.5))
                         .frame(width: 20, height: 20)
@@ -67,18 +69,6 @@ struct CarouselView: View {
     }
 }
 
-private struct CalendarView: View {
-    var body: some View {
-        Image(systemName: "calendar")
-            .resizable()
-            .frame(width: 50, height: 50)
-            .padding()
-            .background(Color.red)
-            .cornerRadius(10)
-            .foregroundColor(.white)
-    }
-}
-
 private struct CardView: View {
     var body: some View {
         Rectangle()
@@ -90,6 +80,22 @@ private struct CardView: View {
 
 struct CarouselView_Previews: PreviewProvider {
     static var previews: some View {
-        CarouselView()
+        CarouselDirector(
+            type: .beta
+        )
+        .slides(
+            data: [
+                CarouselSlideMock(imageUrl: "", placeholderImageUrl: ""),
+                CarouselSlideMock(imageUrl: "", placeholderImageUrl: ""),
+                CarouselSlideMock(imageUrl: "", placeholderImageUrl: ""),
+                CarouselSlideMock(imageUrl: "", placeholderImageUrl: ""),
+            ]
+        )
+        .view
     }
+}
+
+private struct CarouselSlideMock: CarouselSlide {
+    let imageUrl: String
+    let placeholderImageUrl: String
 }

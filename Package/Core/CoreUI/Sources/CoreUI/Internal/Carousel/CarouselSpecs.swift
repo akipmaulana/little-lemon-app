@@ -15,6 +15,12 @@ protocol CarouselSpec {
     var title: String { get }
 }
 
+extension CarouselSpec {
+    var totalSlides: Int {
+        slides.count
+    }
+}
+
 struct CarouselAlpha: CarouselSpec {
     
     var slides: [CarouselSlide] = []

@@ -20,9 +20,9 @@ public final class CarouselDirector {
     
     private var builder: any CarouselBuilder
     
-    public var view: CustomCarouselView {
+    public var view: CarouselView {
         let spec = builder.getComponent()
-        return CustomCarouselView(spec: spec)
+        return CarouselView(spec: spec)
     }
     
     public init(type: CarouselBuilderType) {
