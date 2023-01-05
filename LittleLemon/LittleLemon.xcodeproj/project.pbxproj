@@ -14,6 +14,7 @@
 		DAACE1E8296657B600E63FE5 /* LittleLemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1E7296657B600E63FE5 /* LittleLemonTests.swift */; };
 		DAACE1F2296657B600E63FE5 /* LittleLemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1F1296657B600E63FE5 /* LittleLemonUITests.swift */; };
 		DAACE1F4296657B600E63FE5 /* LittleLemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1F3296657B600E63FE5 /* LittleLemonUITestsLaunchTests.swift */; };
+		DAACE204296659BA00E63FE5 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = DAACE203296659BA00E63FE5 /* CoreUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DAACE1ED296657B600E63FE5 /* LittleLemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleLemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAACE1F1296657B600E63FE5 /* LittleLemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonUITests.swift; sourceTree = "<group>"; };
 		DAACE1F3296657B600E63FE5 /* LittleLemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAACE201296659A600E63FE5 /* CoreUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = CoreUI; path = ../Package/Core/CoreUI; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAACE204296659BA00E63FE5 /* CoreUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,10 +77,12 @@
 		DAACE1CA296657AF00E63FE5 = {
 			isa = PBXGroup;
 			children = (
+				DAACE200296659A600E63FE5 /* Packages */,
 				DAACE1D5296657AF00E63FE5 /* LittleLemon */,
 				DAACE1E6296657B600E63FE5 /* LittleLemonTests */,
 				DAACE1F0296657B600E63FE5 /* LittleLemonUITests */,
 				DAACE1D4296657AF00E63FE5 /* Products */,
+				DAACE202296659BA00E63FE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +132,21 @@
 			path = LittleLemonUITests;
 			sourceTree = "<group>";
 		};
+		DAACE200296659A600E63FE5 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				DAACE201296659A600E63FE5 /* CoreUI */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		DAACE202296659BA00E63FE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +163,9 @@
 			dependencies = (
 			);
 			name = LittleLemon;
+			packageProductDependencies = (
+				DAACE203296659BA00E63FE5 /* CoreUI */,
+			);
 			productName = LittleLemon;
 			productReference = DAACE1D3296657AF00E63FE5 /* LittleLemon.app */;
 			productType = "com.apple.product-type.application";
@@ -583,6 +606,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAACE203296659BA00E63FE5 /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAACE1CB296657AF00E63FE5 /* Project object */;
 }
