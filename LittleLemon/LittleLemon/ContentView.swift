@@ -9,9 +9,25 @@
 import SwiftUI
 import CoreUI
 
+struct CarouselSlideDefault: CarouselSlide {
+    let imageUrl: String
+    let placeholderImageUrl: String
+}
+
 struct ContentView: View {
     var body: some View {
-        Client().carousel
+        CarouselDirector(
+            builderType: .alpha
+        )
+        .setSlides(
+            data: [
+                CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
+                CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
+                CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
+                CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
+            ]
+        )
+        .body
     }
 }
 

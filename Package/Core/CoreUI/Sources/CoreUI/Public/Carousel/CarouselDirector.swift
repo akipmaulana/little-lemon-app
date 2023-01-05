@@ -81,40 +81,24 @@ final class CarouselBetaBuilder: CarouselBuilder {
 
 public protocol CarouselSpec {
     var slides: [CarouselSlide] { get set }
-    var body: any View { get }
+    var title: String { get }
 }
 
-final class CarouselAlpha: CarouselSpec {
+struct CarouselAlpha: CarouselSpec {
     
     var slides: [CarouselSlide] = []
     
-    var body: any View {
-        VStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Carousel Alpha")
-            }
-            .padding()
-        }
+    var title: String {
+        "Alpha"
     }
 }
 
-final class CarouselBeta: CarouselSpec {
+struct CarouselBeta: CarouselSpec {
     
     var slides: [CarouselSlide] = []
     
-    var body: any View {
-        VStack {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Carousel Beta")
-            }
-            .padding()
-        }
+    var title: String {
+        "Beta"
     }
 }
 
@@ -124,54 +108,47 @@ public protocol CarouselSlide {
     var placeholderImageUrl: String { get }
 }
 
-struct CarouselSlideDefault: CarouselSlide {
-    let imageUrl: String
-    let placeholderImageUrl: String
-}
-
 // MARK: - Carousel Director
 public final class CarouselDirector {
     
     private var builder: any CarouselBuilder
     
-    init(builder: any CarouselBuilder) {
-        self.builder = builder
+    public var body: CustomCarouselView {
+        let spec = builder.getComponent()
+        return CustomCarouselView(spec: spec)
     }
     
-    func setSlides(data: [CarouselSlide]) -> Self {
+    public init(builderType: CarouselBuilderType) {
+        switch builderType {
+        case .alpha:
+            builder = CarouselAlphaBuilder()
+        case .beta:
+            builder = CarouselBetaBuilder()
+        }
+    }
+    
+    public func setSlides(data: [CarouselSlide]) -> Self {
         builder.setSlides(data: data)
         return self
     }
-    
-    func getBuilderSpec() -> CarouselSpec {
-        builder.getComponent()
-    }
-    
-    var body: some View {
-        VStack {
-            builder
-                .getComponent()
-                .body
-        }
-    }
 }
 
-public class Client {
+public enum CarouselBuilderType {
+    case alpha
+    case beta
+}
+
+public struct CustomCarouselView: View {
     
-    public init() {}
+    let spec: CarouselSpec
     
-    public var carousel: some View {
-        let spec = CarouselDirector(builder: CarouselAlphaBuilder())
-                        .setSlides(data: [
-                            CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
-                            CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
-                            CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
-                            CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
-                        ])
-                        .body
-        return spec
-        
-//        print("Generated Carousel \(String(describing: spec))")
-//        return spec.body
+    public var body: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text("Carousel \(spec.title)")
+        }
+        .padding()
     }
 }
