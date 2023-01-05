@@ -1,13 +1,12 @@
 //
 //  ContentView.swift
-//  DemoCoreUI
+//  LittleLemon
 //
-//  Created by Akirah Dev on 04/01/23.
+//  Created by Akirah Dev on 05/01/23.
 //  
 //
 
 import SwiftUI
-import CoreUI
 
 struct ContentView: View {
     var body: some View {
@@ -15,7 +14,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text(CoreUI().text)
+            Text("Hello, world!")
         }
         .padding()
     }

@@ -1,15 +1,15 @@
 //
-//  DemoCoreUIApp.swift
-//  DemoCoreUI
+//  LittleLemonApp.swift
+//  LittleLemon
 //
-//  Created by Akirah Dev on 04/01/23.
+//  Created by Akirah Dev on 05/01/23.
 //  
 //
 
 import SwiftUI
 
 @main
-struct DemoCoreUIApp: App {
+struct LittleLemonApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

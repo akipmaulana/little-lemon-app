@@ -1,14 +1,14 @@
 //
-//  DemoCoreUIUITests.swift
-//  DemoCoreUIUITests
+//  LittleLemonUITests.swift
+//  LittleLemonUITests
 //
-//  Created by Akirah Dev on 04/01/23.
+//  Created by Akirah Dev on 05/01/23.
 //  
 //
 
 import XCTest
 
-final class DemoCoreUIUITests: XCTestCase {
+final class LittleLemonUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

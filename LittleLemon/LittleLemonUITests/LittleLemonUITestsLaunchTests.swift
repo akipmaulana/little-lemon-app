@@ -1,14 +1,14 @@
 //
-//  DemoCoreUIUITestsLaunchTests.swift
-//  DemoCoreUIUITests
+//  LittleLemonUITestsLaunchTests.swift
+//  LittleLemonUITests
 //
-//  Created by Akirah Dev on 04/01/23.
+//  Created by Akirah Dev on 05/01/23.
 //  
 //
 
 import XCTest
 
-final class DemoCoreUIUITestsLaunchTests: XCTestCase {
+final class LittleLemonUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
