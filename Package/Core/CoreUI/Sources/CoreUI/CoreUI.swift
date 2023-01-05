@@ -1,5 +1,5 @@
 public struct CoreUI {
-    public private(set) var text = "Hello, World!"
+    public private(set) var text = "Hello from CoreUI!"
 
     public init() {
     }
