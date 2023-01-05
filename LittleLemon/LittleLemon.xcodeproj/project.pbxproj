@@ -14,6 +14,7 @@
 		DAACE1E8296657B600E63FE5 /* LittleLemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1E7296657B600E63FE5 /* LittleLemonTests.swift */; };
 		DAACE1F2296657B600E63FE5 /* LittleLemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1F1296657B600E63FE5 /* LittleLemonUITests.swift */; };
 		DAACE1F4296657B600E63FE5 /* LittleLemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAACE1F3296657B600E63FE5 /* LittleLemonUITestsLaunchTests.swift */; };
+		DAACE2072966960800E63FE5 /* CoreUI in Frameworks */ = {isa = PBXBuildFile; productRef = DAACE2062966960800E63FE5 /* CoreUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAACE2072966960800E63FE5 /* CoreUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,7 @@
 			);
 			name = LittleLemon;
 			packageProductDependencies = (
+				DAACE2062966960800E63FE5 /* CoreUI */,
 			);
 			productName = LittleLemon;
 			productReference = DAACE1D3296657AF00E63FE5 /* LittleLemon.app */;
@@ -603,6 +606,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DAACE2062966960800E63FE5 /* CoreUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CoreUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DAACE1CB296657AF00E63FE5 /* Project object */;
 }
