@@ -17,9 +17,9 @@ struct CarouselSlideDefault: CarouselSlide {
 struct ContentView: View {
     var body: some View {
         CarouselDirector(
-            builderType: .alpha
+            type: .beta
         )
-        .setSlides(
+        .slides(
             data: [
                 CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
                 CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
@@ -27,7 +27,7 @@ struct ContentView: View {
                 CarouselSlideDefault(imageUrl: "", placeholderImageUrl: ""),
             ]
         )
-        .body
+        .view
     }
 }
 
