@@ -8,6 +8,82 @@
 
 import SwiftUI
 
+struct CircleIndicatorView: View {
+    
+    let selected: Bool
+    
+    var body: some View {
+        Circle()
+            .fill(selected ? Color.purple : Color.purple.opacity(0.5))
+            .frame(width: 20, height: 20)
+    }
+}
+
+struct SquareIndicatorView: View {
+    
+    let selected: Bool
+    
+    var body: some View {
+        Rectangle()
+            .fill(selected ? Color.purple : Color.purple.opacity(0.5))
+            .frame(width: 20, height: 20)
+    }
+}
+
+struct LineIndicatorView: View {
+    
+    let selected: Bool
+    
+    var body: some View {
+        Rectangle()
+            .fill(selected ? Color.purple : Color.purple.opacity(0.5))
+            .frame(width: 30, height: 5)
+    }
+}
+
+struct LongLineIndicatorView: View {
+    
+    let selected: Bool
+    
+    var body: some View {
+        Rectangle()
+            .fill(selected ? Color.purple : Color.purple.opacity(0.5))
+            .frame(height: 5)
+    }
+}
+
+struct GroupIndicatorView: View {
+    
+    let totalSlide: Int
+    @Binding var index: Int
+    
+    var body: some View {
+        HStack(spacing: 4) {
+            ForEach((0..<totalSlide), id: \.self) { index in
+                CircleIndicatorView(selected: index == self.index)
+            }
+        }
+    }
+}
+
+struct SliderView: View {
+    
+    let totalSlide: Int
+    @Binding var index: Int
+    
+    var body: some View {
+        TabView(selection: $index) {
+            ForEach((0..<totalSlide), id: \.self) { index in
+                CardView()
+            }
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .background(Color.blue)
+        .frame(height: 200)
+        .padding()
+    }
+}
+
 public struct CarouselView: View {
     
     let spec: CarouselSpec
@@ -17,54 +93,9 @@ public struct CarouselView: View {
     public var body: some View {
         VStack{
             
-            TabView(selection: $index) {
-                ForEach((0..<spec.totalSlides), id: \.self) { index in
-                    CardView()
-                }
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            .background(Color.blue)
-            .frame(height: 200)
-            .padding()
+            SliderView(totalSlide: spec.totalSlides, index: $index)
             
-            HStack(spacing: 4) {
-                ForEach((0..<spec.totalSlides), id: \.self) { index in
-                    Circle()
-                        .fill(index == self.index ? Color.purple : Color.purple.opacity(0.5))
-                        .frame(width: 20, height: 20)
-
-                }
-            }
-            
-//
-//            HStack(spacing: 2) {
-//                ForEach((0..<3), id: \.self) { index in
-//                    Rectangle()
-//                        .fill(index == self.index ? Color.purple : Color.purple.opacity(0.5))
-//                        .frame(width: 20, height: 20)
-//
-//                }
-//            }
-//            .padding()
-//
-//            HStack(spacing: 2) {
-//                ForEach((0..<3), id: \.self) { index in
-//                    Rectangle()
-//                        .fill(index == self.index ? Color.purple : Color.purple.opacity(0.5))
-//                        .frame(width: 30, height: 5)
-//
-//                }
-//            }
-//            .padding()
-//
-//            HStack(spacing: 2) {
-//                ForEach((0..<3), id: \.self) { index in
-//                    Rectangle()
-//                        .fill(index == self.index ? Color.purple : Color.purple.opacity(0.5))
-//                        .frame(height: 5)
-//                }
-//            }
-//            .padding()
+            GroupIndicatorView(totalSlide: spec.totalSlides, index: $index)
         }
     }
 }
