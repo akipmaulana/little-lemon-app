@@ -18,6 +18,8 @@
 		DAB672E7296B271E00C0E1F2 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E6296B271D00C0E1F2 /* MenuItemView.swift */; };
 		DAB672E9296B278500C0E1F2 /* MenuItemsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */; };
 		DAB672EB296B27A500C0E1F2 /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */; };
+		DAB672ED296B28F100C0E1F2 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */; };
+		DAB672EF296B296400C0E1F2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EE296B296400C0E1F2 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		DAB672E6296B271D00C0E1F2 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsOptionView.swift; sourceTree = "<group>"; };
 		DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailView.swift; sourceTree = "<group>"; };
+		DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
+		DAB672EE296B296400C0E1F2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				DAB672E4296B253100C0E1F2 /* Filterable.swift */,
+				DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */,
+				DAB672EE296B296400C0E1F2 /* Ingredient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +294,8 @@
 				DAB672E7296B271E00C0E1F2 /* MenuItemView.swift in Sources */,
 				DA0BA50929699A8B00A26724 /* ContentView.swift in Sources */,
 				DAB672E5296B253100C0E1F2 /* Filterable.swift in Sources */,
+				DAB672ED296B28F100C0E1F2 /* MenuCategory.swift in Sources */,
+				DAB672EF296B296400C0E1F2 /* Ingredient.swift in Sources */,
 				DA0BA50729699A8B00A26724 /* LittleLemonApp.swift in Sources */,
 				DAB672E9296B278500C0E1F2 /* MenuItemsOptionView.swift in Sources */,
 				DAB672EB296B27A500C0E1F2 /* MenuItemDetailView.swift in Sources */,

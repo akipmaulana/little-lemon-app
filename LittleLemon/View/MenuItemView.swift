@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ThematicSkeletonView: View {
     
-    let type: FilterType
+    let type: MenuCategory
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -51,7 +51,7 @@ struct MenuItemsView: View {
         NavigationView {
             ScrollView {
                 
-                ForEach(FilterType.allCases, id: \.hashValue) {
+                ForEach(MenuCategory.allCases, id: \.hashValue) {
                     
                     ThematicSkeletonView(type: $0)
                 }

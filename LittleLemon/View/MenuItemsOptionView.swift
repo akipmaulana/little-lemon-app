@@ -17,7 +17,7 @@ struct MenuItemsOptionView: View {
                 
                 List {
                     Section("Selected Categories") {
-                        ForEach(FilterType.allCases, id: \.hashValue) {
+                        ForEach(MenuCategory.allCases, id: \.hashValue) {
                             Text($0.title)
                         }
                     }
