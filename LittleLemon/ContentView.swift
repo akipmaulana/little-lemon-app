@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            MenuItemsDetailView()
+            MenuItemsView()
         }
     }
 }
@@ -58,6 +58,9 @@ struct ThematicSkeletonView: View {
 }
 
 struct MenuItemsView: View {
+    
+    @State private var isPresented: Bool = false
+    
     var body: some View {
         ScrollView {
             ThematicSkeletonView(title: "Food")
@@ -66,13 +69,20 @@ struct MenuItemsView: View {
             
             ThematicSkeletonView(title: "Desert")
         }
+        .popover(isPresented: $isPresented, content: {
+            NavigationView {
+                MenuItemsOptionView()
+            }
+        })
         .navigationBarTitle(
             Text("Menu")
                 .font(.subheadline),
             displayMode: .large
         )
         .toolbar {
-            Button(action: {}) {
+            Button(action: {
+                isPresented.toggle()
+            }) {
                 Image(systemName: "slider.horizontal.3")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
@@ -81,8 +91,9 @@ struct MenuItemsView: View {
     }
 }
 
-
 struct MenuItemsOptionView: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -113,7 +124,7 @@ struct MenuItemsOptionView: View {
         )
         .toolbar {
             Button("Done") {
-                
+                dismiss()
             }
         }
     }
