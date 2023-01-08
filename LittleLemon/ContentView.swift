@@ -11,20 +11,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            ScrollView {
-                ThematicSkeletonView(title: "Food")
-                
-                ThematicSkeletonView(title: "Drink")
-                
-                ThematicSkeletonView(title: "Desert")
-            }
-            .navigationBarTitle(
-                Text("Menu")
-                    .font(.subheadline),
-                displayMode: .large
-            )
+            MenuItemsOptionView()
         }
-        
     }
 }
 
@@ -65,6 +53,68 @@ struct ThematicSkeletonView: View {
                 }
             }
             .padding(.horizontal)
+        }
+    }
+}
+
+struct MenuListScreen: View {
+    var body: some View {
+        ScrollView {
+            ThematicSkeletonView(title: "Food")
+            
+            ThematicSkeletonView(title: "Drink")
+            
+            ThematicSkeletonView(title: "Desert")
+        }
+        .navigationBarTitle(
+            Text("Menu")
+                .font(.subheadline),
+            displayMode: .large
+        )
+        .toolbar {
+            Button(action: {}) {
+                Image(systemName: "slider.horizontal.3")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+            }
+        }
+    }
+}
+
+
+struct MenuItemsOptionView: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            
+            List {
+                Section("Selected Categories") {
+                    Text("Food")
+                    
+                    Text("Drink")
+                    
+                    Text("Desert")
+                }
+                
+                Section("Sort By") {
+                    Text("Most Popular")
+                    
+                    Text("Price $-$$$")
+                    
+                    Text("A-Z")
+                }
+                
+            }
+            .listStyle(.grouped)
+        }
+        .navigationBarTitle(
+            Text("Filter")
+                .font(.subheadline),
+            displayMode: .large
+        )
+        .toolbar {
+            Button("Done") {
+                
+            }
         }
     }
 }
