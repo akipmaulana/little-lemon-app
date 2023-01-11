@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DA0BA50729699A8B00A26724 /* LittleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA50629699A8B00A26724 /* LittleLemonApp.swift */; };
-		DA0BA50929699A8B00A26724 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA50829699A8B00A26724 /* ContentView.swift */; };
 		DA0BA50B29699A8E00A26724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0BA50A29699A8E00A26724 /* Assets.xcassets */; };
 		DA0BA50E29699A8E00A26724 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0BA50D29699A8E00A26724 /* Preview Assets.xcassets */; };
 		DA0BA51829699A8E00A26724 /* LittleLemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA51729699A8E00A26724 /* LittleLemonTests.swift */; };
 		DA0BA52229699A8E00A26724 /* LittleLemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA52129699A8E00A26724 /* LittleLemonUITests.swift */; };
 		DA0BA52429699A8E00A26724 /* LittleLemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA52329699A8E00A26724 /* LittleLemonUITestsLaunchTests.swift */; };
 		DAB672E5296B253100C0E1F2 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E4296B253100C0E1F2 /* Filterable.swift */; };
-		DAB672E7296B271E00C0E1F2 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E6296B271D00C0E1F2 /* MenuItemView.swift */; };
+		DAB672E7296B271E00C0E1F2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E6296B271D00C0E1F2 /* MenuView.swift */; };
 		DAB672E9296B278500C0E1F2 /* MenuItemsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */; };
 		DAB672EB296B27A500C0E1F2 /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */; };
 		DAB672ED296B28F100C0E1F2 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */; };
@@ -42,7 +41,6 @@
 /* Begin PBXFileReference section */
 		DA0BA50329699A8B00A26724 /* LittleLemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittleLemon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0BA50629699A8B00A26724 /* LittleLemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonApp.swift; sourceTree = "<group>"; };
-		DA0BA50829699A8B00A26724 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DA0BA50A29699A8E00A26724 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA0BA50D29699A8E00A26724 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA0BA51329699A8E00A26724 /* LittleLemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleLemonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,8 +48,9 @@
 		DA0BA51D29699A8E00A26724 /* LittleLemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleLemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0BA52129699A8E00A26724 /* LittleLemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonUITests.swift; sourceTree = "<group>"; };
 		DA0BA52329699A8E00A26724 /* LittleLemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DA520309296F0C6F00CF3E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DAB672E4296B253100C0E1F2 /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
-		DAB672E6296B271D00C0E1F2 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		DAB672E6296B271D00C0E1F2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsOptionView.swift; sourceTree = "<group>"; };
 		DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailView.swift; sourceTree = "<group>"; };
 		DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
@@ -106,10 +105,10 @@
 		DA0BA50529699A8B00A26724 /* LittleLemon */ = {
 			isa = PBXGroup;
 			children = (
+				DA520309296F0C6F00CF3E9C /* Info.plist */,
 				DAB672E3296B251600C0E1F2 /* Model */,
 				DAB672E2296B250D00C0E1F2 /* View */,
 				DA0BA50629699A8B00A26724 /* LittleLemonApp.swift */,
-				DA0BA50829699A8B00A26724 /* ContentView.swift */,
 				DA0BA50A29699A8E00A26724 /* Assets.xcassets */,
 				DA0BA50C29699A8E00A26724 /* Preview Content */,
 			);
@@ -144,7 +143,7 @@
 		DAB672E2296B250D00C0E1F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DAB672E6296B271D00C0E1F2 /* MenuItemView.swift */,
+				DAB672E6296B271D00C0E1F2 /* MenuView.swift */,
 				DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */,
 				DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */,
 			);
@@ -291,8 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB672E7296B271E00C0E1F2 /* MenuItemView.swift in Sources */,
-				DA0BA50929699A8B00A26724 /* ContentView.swift in Sources */,
+				DAB672E7296B271E00C0E1F2 /* MenuView.swift in Sources */,
 				DAB672E5296B253100C0E1F2 /* Filterable.swift in Sources */,
 				DAB672ED296B28F100C0E1F2 /* MenuCategory.swift in Sources */,
 				DAB672EF296B296400C0E1F2 /* Ingredient.swift in Sources */,
@@ -460,6 +458,7 @@
 				DEVELOPMENT_TEAM = GVZVUY66BX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LittleLemon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -489,6 +488,7 @@
 				DEVELOPMENT_TEAM = GVZVUY66BX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LittleLemon/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
