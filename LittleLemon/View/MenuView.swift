@@ -62,7 +62,12 @@ struct MenuView: View {
                 viewModel.refreshLoadMenu()
             }
             .popover(isPresented: $isPresented, content: {
-                MenuItemsOptionView()
+                MenuItemsOptionView(
+                    selectedCategory: $viewModel.selectedCategory,
+                    selectedSort: $viewModel.selectedSort
+                ) {
+                    viewModel.filterSortMenu()
+                }
             })
             .navigationBarTitle(
                 Text("Menu")
@@ -132,11 +137,32 @@ final class MenuViewModel: ObservableObject {
     @Published private(set) var displayedFood: [MenuItem] = []
     @Published private(set) var displayedDrink: [MenuItem] = []
     @Published private(set) var displayedDesert: [MenuItem] = []
+    @Published var selectedCategory: MenuCategory?
+    @Published var selectedSort: SortType?
     
     func refreshLoadMenu() {
         displayedFood = foods
         displayedDrink = drinks
         displayedDesert = deserts
+    }
+    
+    func filterSortMenu() {
+        switch selectedCategory {
+        case .some(.food):
+            displayedFood = foods
+            displayedDrink = []
+            displayedDesert = []
+        case .some(.drink):
+            displayedFood = []
+            displayedDrink = drinks
+            displayedDesert = []
+        case .some(.desert):
+            displayedFood = []
+            displayedDrink = []
+            displayedDesert = deserts
+        default:
+            break
+        }
     }
 }
 
