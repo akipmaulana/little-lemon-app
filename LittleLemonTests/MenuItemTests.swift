@@ -16,6 +16,20 @@ extension MenuItem: Equatable {
 }
 
 final class MenuItemTests: XCTestCase {
+    
+    func testMenuItem_whenInitialized_shouldDisplayAccordingly() {
+        let sut: MenuItem = MenuItem(
+            title: "Thai Noodles",
+            price: 31,
+            orders: 5,
+            category: .drink,
+            ingredients: [.spinach, .carrot, .pasta, .tomato]
+        )
+        
+        XCTAssertEqual(sut.title, "Thai Noodles")
+        XCTAssertEqual(sut.ingredients, [.spinach, .carrot, .pasta, .tomato])
+    }
+    
     func testMenuItem_whenNoFilter_shouldDisplayAll() {
         let sut: MenuViewModel = MenuViewModel()
         
