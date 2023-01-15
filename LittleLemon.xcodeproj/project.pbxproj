@@ -10,12 +10,12 @@
 		DA0BA50729699A8B00A26724 /* LittleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA50629699A8B00A26724 /* LittleLemonApp.swift */; };
 		DA0BA50B29699A8E00A26724 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0BA50A29699A8E00A26724 /* Assets.xcassets */; };
 		DA0BA50E29699A8E00A26724 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0BA50D29699A8E00A26724 /* Preview Assets.xcassets */; };
-		DA0BA51829699A8E00A26724 /* LittleLemonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA51729699A8E00A26724 /* LittleLemonTests.swift */; };
 		DA0BA52229699A8E00A26724 /* LittleLemonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA52129699A8E00A26724 /* LittleLemonUITests.swift */; };
 		DA0BA52429699A8E00A26724 /* LittleLemonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0BA52329699A8E00A26724 /* LittleLemonUITestsLaunchTests.swift */; };
 		DA25C72E2973A90F00F963BD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C72D2973A90F00F963BD /* MockData.swift */; };
+		DA25C7302973C29000F963BD /* MenuItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA25C72F2973C29000F963BD /* MenuItemTests.swift */; };
 		DAB672E5296B253100C0E1F2 /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E4296B253100C0E1F2 /* Filterable.swift */; };
-		DAB672E7296B271E00C0E1F2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E6296B271D00C0E1F2 /* MenuView.swift */; };
+		DAB672E7296B271E00C0E1F2 /* MenuItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E6296B271D00C0E1F2 /* MenuItemsView.swift */; };
 		DAB672E9296B278500C0E1F2 /* MenuItemsOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */; };
 		DAB672EB296B27A500C0E1F2 /* MenuItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */; };
 		DAB672ED296B28F100C0E1F2 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */; };
@@ -45,14 +45,14 @@
 		DA0BA50A29699A8E00A26724 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA0BA50D29699A8E00A26724 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DA0BA51329699A8E00A26724 /* LittleLemonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleLemonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA0BA51729699A8E00A26724 /* LittleLemonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonTests.swift; sourceTree = "<group>"; };
 		DA0BA51D29699A8E00A26724 /* LittleLemonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LittleLemonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0BA52129699A8E00A26724 /* LittleLemonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonUITests.swift; sourceTree = "<group>"; };
 		DA0BA52329699A8E00A26724 /* LittleLemonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DA25C72D2973A90F00F963BD /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		DA25C72F2973C29000F963BD /* MenuItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTests.swift; sourceTree = "<group>"; };
 		DA520309296F0C6F00CF3E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DAB672E4296B253100C0E1F2 /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
-		DAB672E6296B271D00C0E1F2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		DAB672E6296B271D00C0E1F2 /* MenuItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsView.swift; sourceTree = "<group>"; };
 		DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsOptionView.swift; sourceTree = "<group>"; };
 		DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailView.swift; sourceTree = "<group>"; };
 		DAB672EC296B28F100C0E1F2 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 		DA0BA51629699A8E00A26724 /* LittleLemonTests */ = {
 			isa = PBXGroup;
 			children = (
-				DA0BA51729699A8E00A26724 /* LittleLemonTests.swift */,
+				DA25C72F2973C29000F963BD /* MenuItemTests.swift */,
 			);
 			path = LittleLemonTests;
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 		DAB672E2296B250D00C0E1F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DAB672E6296B271D00C0E1F2 /* MenuView.swift */,
+				DAB672E6296B271D00C0E1F2 /* MenuItemsView.swift */,
 				DAB672E8296B278500C0E1F2 /* MenuItemsOptionView.swift */,
 				DAB672EA296B27A500C0E1F2 /* MenuItemDetailView.swift */,
 			);
@@ -301,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB672E7296B271E00C0E1F2 /* MenuView.swift in Sources */,
+				DAB672E7296B271E00C0E1F2 /* MenuItemsView.swift in Sources */,
 				DAB672E5296B253100C0E1F2 /* Filterable.swift in Sources */,
 				DAB672ED296B28F100C0E1F2 /* MenuCategory.swift in Sources */,
 				DAB672EF296B296400C0E1F2 /* Ingredient.swift in Sources */,
@@ -316,7 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA0BA51829699A8E00A26724 /* LittleLemonTests.swift in Sources */,
+				DA25C7302973C29000F963BD /* MenuItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
