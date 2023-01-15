@@ -28,14 +28,16 @@ struct ThematicSkeletonView: View {
                 ]
             ) {
                 ForEach(menu, id: \.id) { item in
-                    VStack {
-                        Image("")
-                            .resizable()
-                            .background(Color.black)
-                            .frame(height: 64)
-                            .clipped()
-                        
-                        Text("\(item.title)")
+                    NavigationLink(destination: MenuItemDetailView(item: item)) {
+                        VStack {
+                            Image("")
+                                .resizable()
+                                .background(Color.black)
+                                .frame(height: 64)
+                                .clipped()
+                            
+                            Text("\(item.title)")
+                        }
                     }
                 }
             }

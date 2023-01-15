@@ -9,9 +9,12 @@
 import SwiftUI
 
 struct MenuItemDetailView: View {
+    
+    let item: any Itemable
+    
     var body: some View {
         VStack {
-            Text("Food 5")
+            Text(item.title)
                 .font(.largeTitle)
                 .frame(
                     maxWidth: .infinity,
@@ -28,14 +31,14 @@ struct MenuItemDetailView: View {
             VStack {
                 Text("Price")
                     .fontWeight(.bold)
-                Text("10,99")
+                Text(String(format: "$%.2f", item.price))
             }
             .padding(.bottom)
             
             VStack {
                 Text("Ordered")
                     .fontWeight(.bold)
-                Text("1,000")
+                Text("\(item.orders) times")
             }
             .padding(.bottom)
             
@@ -43,13 +46,9 @@ struct MenuItemDetailView: View {
                 Text("Ingredients")
                     .fontWeight(.bold)
                 VStack {
-                    Text("Spinach")
-                    
-                    Text("Broccolli")
-                    
-                    Text("Carrot")
-                    
-                    Text("Pasta")
+                    ForEach(item.ingredients) { ingredient in
+                        Text(ingredient.rawValue)
+                    }
                 }
             }
             
@@ -60,6 +59,6 @@ struct MenuItemDetailView: View {
 
 struct MenuItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MenuItemDetailView()
+        MenuItemDetailView(item: MenuItem(title: "Foody", price: 23, orders: 4, category: .food, ingredients: [.tomato, .pasta, .carrot, .spinach]))
     }
 }
