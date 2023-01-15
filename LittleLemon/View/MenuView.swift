@@ -90,48 +90,132 @@ struct MenuView: View {
 final class MenuViewModel: ObservableObject {
     
     let foods: [MenuItem] = [
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.spinach, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.spinach, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .food,
-                 ingredients: [.carrot, .pasta, .tomato]),
+        MenuItem(
+            price: 83,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 43,
+            category: .food,
+            ingredients: [.pasta, .tomato]
+        ),
+        MenuItem(
+            price: 54,
+            category: .food,
+            ingredients: [.carrot, .tomato]
+        ),
+        MenuItem(
+            price: 12,
+            category: .food,
+            ingredients: [.spinach, .tomato]
+        ),
+        MenuItem(
+            price: 32,
+            category: .food,
+            ingredients: [.spinach, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 54,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 86,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 65,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 79,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 94,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 12,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 32,
+            category: .food,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
     ]
     
     let drinks: [MenuItem] = [
-        MenuItem(category: .drink, ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .drink, ingredients: [.pasta, .tomato]),
-        MenuItem(category: .drink, ingredients: [.carrot, .tomato]),
-        MenuItem(category: .drink, ingredients: [.spinach, .tomato]),
-        MenuItem(category: .drink, ingredients: [.spinach, .pasta, .tomato]),
-        MenuItem(category: .drink, ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .drink, ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .drink, ingredients: [.carrot, .pasta, .tomato])
+        MenuItem(
+            price: 12,
+            category: .drink,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 43,
+            category: .drink,
+            ingredients: [.pasta, .tomato]
+        ),
+        MenuItem(
+            price: 51,
+            category: .drink,
+            ingredients: [.carrot, .tomato]
+        ),
+        MenuItem(
+            price: 37,
+            category: .drink,
+            ingredients: [.spinach, .tomato]
+        ),
+        MenuItem(
+            price: 32,
+            category: .drink,
+            ingredients: [.spinach, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 27,
+            category: .drink,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 26,
+            category: .drink,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 25,
+            category: .drink,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
     ]
     
     let deserts: [MenuItem] = [
-        MenuItem(category: .desert, ingredients: [.carrot, .pasta, .tomato]),
-        MenuItem(category: .desert, ingredients: [.pasta, .tomato]),
-        MenuItem(category: .desert, ingredients: [.carrot, .tomato]),
-        MenuItem(category: .desert, ingredients: [.spinach, .tomato]),
+        MenuItem(
+            price: 54,
+            category: .desert,
+            ingredients: [.carrot, .pasta, .tomato]
+        ),
+        MenuItem(
+            price: 61,
+            category: .desert,
+            ingredients: [.pasta, .tomato, .spinach]
+        ),
+        MenuItem(
+            price: 43,
+            category: .desert,
+            ingredients: [.carrot, .tomato]
+        ),
+        MenuItem(
+            price: 33,
+            category: .desert,
+            ingredients: [.spinach, .tomato]
+        ),
     ]
     
     @Published private(set) var displayedFood: [MenuItem] = []
