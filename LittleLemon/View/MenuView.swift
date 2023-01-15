@@ -27,7 +27,7 @@ struct ThematicSkeletonView: View {
                     GridItem(.flexible()),
                 ]
             ) {
-                ForEach((0..<menu.count), id: \.self) { index in
+                ForEach(menu, id: \.id) { item in
                     VStack {
                         Image("")
                             .resizable()
@@ -35,7 +35,7 @@ struct ThematicSkeletonView: View {
                             .frame(height: 64)
                             .clipped()
                         
-                        Text("\(type.title) \(index + 1)")
+                        Text("\(item.title)")
                     }
                 }
             }
@@ -66,7 +66,7 @@ struct MenuView: View {
                     selectedCategory: $viewModel.selectedCategory,
                     selectedSort: $viewModel.selectedSort
                 ) {
-                    viewModel.filterSortMenu()
+                    viewModel.filterMenu()
                 }
             })
             .navigationBarTitle(
@@ -89,135 +89,6 @@ struct MenuView: View {
 
 final class MenuViewModel: ObservableObject {
     
-    let foods: [MenuItem] = [
-        MenuItem(
-            price: 83,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 43,
-            category: .food,
-            ingredients: [.pasta, .tomato]
-        ),
-        MenuItem(
-            price: 54,
-            category: .food,
-            ingredients: [.carrot, .tomato]
-        ),
-        MenuItem(
-            price: 12,
-            category: .food,
-            ingredients: [.spinach, .tomato]
-        ),
-        MenuItem(
-            price: 32,
-            category: .food,
-            ingredients: [.spinach, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 54,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 86,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 65,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 79,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 94,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 12,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 32,
-            category: .food,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-    ]
-    
-    let drinks: [MenuItem] = [
-        MenuItem(
-            price: 12,
-            category: .drink,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 43,
-            category: .drink,
-            ingredients: [.pasta, .tomato]
-        ),
-        MenuItem(
-            price: 51,
-            category: .drink,
-            ingredients: [.carrot, .tomato]
-        ),
-        MenuItem(
-            price: 37,
-            category: .drink,
-            ingredients: [.spinach, .tomato]
-        ),
-        MenuItem(
-            price: 32,
-            category: .drink,
-            ingredients: [.spinach, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 27,
-            category: .drink,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 26,
-            category: .drink,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 25,
-            category: .drink,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-    ]
-    
-    let deserts: [MenuItem] = [
-        MenuItem(
-            price: 54,
-            category: .desert,
-            ingredients: [.carrot, .pasta, .tomato]
-        ),
-        MenuItem(
-            price: 61,
-            category: .desert,
-            ingredients: [.pasta, .tomato, .spinach]
-        ),
-        MenuItem(
-            price: 43,
-            category: .desert,
-            ingredients: [.carrot, .tomato]
-        ),
-        MenuItem(
-            price: 33,
-            category: .desert,
-            ingredients: [.spinach, .tomato]
-        ),
-    ]
-    
     @Published private(set) var displayedFood: [MenuItem] = []
     @Published private(set) var displayedDrink: [MenuItem] = []
     @Published private(set) var displayedDesert: [MenuItem] = []
@@ -225,26 +96,44 @@ final class MenuViewModel: ObservableObject {
     @Published var selectedSort: SortType?
     
     func refreshLoadMenu() {
-        displayedFood = foods
-        displayedDrink = drinks
-        displayedDesert = deserts
+        displayedFood = MockData.foods
+        displayedDrink = MockData.drinks
+        displayedDesert = MockData.deserts
     }
     
-    func filterSortMenu() {
+    func sortMenu(data: [MenuItem], by sortType: SortType?) -> [MenuItem] {
+        guard let sortType = sortType else {
+            return data
+        }
+        
+        switch sortType {
+        case .ascending:
+            return data.sorted(by: { $0.title < $1.title })
+        case .popular:
+            return data.sorted(by: { $0.orders > $1.orders })
+        case .price:
+            return data.sorted(by: { $0.price > $1.price })
+        }
+    }
+    
+    func filterMenu() {
         switch selectedCategory {
         case .some(.food):
-            displayedFood = foods
+            displayedFood = sortMenu(data: MockData.foods, by: selectedSort)
             displayedDrink = []
             displayedDesert = []
         case .some(.drink):
             displayedFood = []
-            displayedDrink = drinks
+            displayedDrink = sortMenu(data: MockData.drinks, by: selectedSort)
             displayedDesert = []
         case .some(.desert):
             displayedFood = []
             displayedDrink = []
-            displayedDesert = deserts
+            displayedDesert = sortMenu(data: MockData.deserts, by: selectedSort)
         default:
+            displayedFood = sortMenu(data: MockData.foods, by: selectedSort)
+            displayedDrink = sortMenu(data: MockData.drinks, by: selectedSort)
+            displayedDesert = sortMenu(data: MockData.deserts, by: selectedSort)
             break
         }
     }

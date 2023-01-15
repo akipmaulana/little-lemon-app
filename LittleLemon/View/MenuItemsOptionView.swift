@@ -44,7 +44,11 @@ struct MenuItemsOptionView: View {
                                 }
                             }
                             .onTapGesture {
-                                selectedCategory = menu
+                                if menu == .some(selectedCategory) {
+                                    selectedCategory = nil
+                                } else {
+                                    selectedCategory = menu
+                                }
                             }
                         }
                     }
@@ -61,7 +65,11 @@ struct MenuItemsOptionView: View {
                                 }
                             }
                             .onTapGesture {
-                                selectedSort = sort
+                                if sort == .some(selectedSort) {
+                                    selectedSort = nil
+                                } else {
+                                    selectedSort = sort
+                                }
                             }
                         }
                     }

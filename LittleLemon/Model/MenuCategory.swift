@@ -19,6 +19,7 @@ enum MenuCategory: String, CaseIterable, Selectable {
 }
 
 protocol Itemable: Identifiable {
+    var id: UUID { get }
     var price: Double { get }
     var title: String { get }
     var category: MenuCategory { get }
@@ -27,17 +28,15 @@ protocol Itemable: Identifiable {
 }
 
 struct MenuItem: Itemable {
+    let title: String
+    
     let price: Double
     
-    var orders: Int = 0
+    let orders: Int
 
     let id = UUID()
     
     let category: MenuCategory
     
     let ingredients: [Ingredient]
-    
-    var title: String {
-        category.rawValue
-    }
 }
